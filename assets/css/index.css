@@ -1,0 +1,30 @@
+body {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body:after {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    -moz-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    -webkit-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    -ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    content: '';
+    background-image: url(https://cdn.pixabay.com/photo/2021/01/10/17/29/castle-5905799_1280.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    visibility: visible;
+    opacity: 1;
+}
