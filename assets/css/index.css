@@ -1,0 +1,101 @@
+header p {
+    color: rgba(77, 74, 74, 0.89);
+}
+
+
+body {
+    background-color: #1e1f23;
+    padding-top: 8rem;
+}
+
+    body.is-loading:after {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    body:after {
+        -moz-pointer-events: none;
+        -webkit-pointer-events: none;
+        -ms-pointer-events: none;
+        pointer-events: none;
+        -moz-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+        -webkit-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+        -ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+        transition: opacity 1.5s ease-in-out, visibility 1.5s;
+        content: '';
+        background-image: url(../../images/bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        visibility: visible;
+        opacity: 1;
+    }
+
+        @media screen and (max-width: 980px) {
+
+            body:after {
+                background-attachment: scroll;
+                background-position: top;
+                background-size: 100%;
+            }
+
+        }
+
+#header {
+    color: #a6a6a6;
+    cursor: default;
+    position: relative;
+    text-align: center;
+    z-index: 10001;
+}
+
+    #header > .logo {
+        margin: 0 0 4rem 0;
+        padding: 0;
+    }
+
+        #header > .logo a {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #FFF;
+            text-decoration: none;
+            line-height: 1rem;
+        }
+
+        #header > .logo span {
+            font-weight: 300;
+            font-size: 1rem;
+            display: block;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+@media screen and (max-width: 1280px) {
+
+    body {
+        padding-top: 6rem;
+        background-attachment: scroll;
+        background-size: auto;
+        background-position: top;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    #header > .logo {
+        margin: 0 0 2rem 0;
+    }
+
+        #header > .logo a {
+            font-size: 3rem;
+        }
+
+}
